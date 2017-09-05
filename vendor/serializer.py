@@ -4,6 +4,7 @@ from .models import Vendor
 class VendorModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Vendor
+        fields = '__all__'
 
 
 class VendorSerializer(serializers.Serializer):

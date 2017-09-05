@@ -4,10 +4,11 @@ from .models import Bill
 class BillModelSerializer(serializers.ModelSerializer):
     class Meta:
         model = Bill
+        fields = '__all__'
 
 
-class BillSerializer(serializers.Serializer):
-    vendor = serializers.PrimaryKeyRelatedField()
-    amount = serializers.FloatField()
-    bill_date = serializers.DateField()
-    due_date = serializers.DateField()
+# class BillSerializer(serializers.Serializer):
+#     vendor = serializers.PrimaryKeyRelatedField()
+#     amount = serializers.FloatField()
+#     bill_date = serializers.DateField()
+#     due_date = serializers.DateField()
